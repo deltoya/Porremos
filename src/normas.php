@@ -13,7 +13,7 @@
 				<h2><strong>Requisitos</strong></h2>
 				<div class="content">
 	
-					<img src="images/zakumi.png" class="cpic right" alt="" />
+					<img src="images/floripondio.png" class="cpic right" alt="" />
 					<p><strong>Para participar</strong> en la <em>Porra del Mundial 2010</em> es necesario tener ganas de pasar un mundial divertid&iacute;simo, conocer a uno de los 4 organizadores y tener 10 &euro; en el bolsillo. La RAE coincidiendo con el comienzo de este evento ha dado de alta un nuevo verbo, el verbo porrar, as&iacute; que ya podemos decir tranquilamente que este a&ntilde;o <strong>PORREMOS!</strong></p>
 				</div>
 	

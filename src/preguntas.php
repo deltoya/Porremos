@@ -17,7 +17,7 @@ require_once("inc/Comprobador.inc");
 				<h2><strong>Preguntas</strong> adicionales</h2>
 				<div class="content">
 	
-					<img src="images/zakumi.png" class="cpic right" alt="" />
+					<img src="images/floripondio.png" class="cpic right" alt="" />
 					<p><strong>Las preguntas</strong> que se muestran a continuaci&oacute;n son apuestas adicionales a los resultados de los partidos, y como tales conllevan puntos extras. Deben responderse <strong>antes</strong> del comienzo del campeonato. Ten&eacute;is informaci&oacute;n adicional en las <a href="normas.php">normas</a>.</p>
 					<table>
 					<tr>

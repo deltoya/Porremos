@@ -19,7 +19,7 @@ include ("../header.php")
 				<div class="content">
 
 					<form name="updateuser" action="createuser.php" method="POST">
-					<img src="/images/zakumi.png" class="cpic right" alt="" />
+					<img src="/images/floripondio.png" class="cpic right" alt="" />
 					<p><strong>Alta de</strong> usuarios. Dales ca&ntilde;a, pero resiste tus impulsos de poner alias estilo <em>Segismunda</em> o <em>Espermatozoide</em>. Nunca sabes como responder&aacute; un picha floja cuando le cambias el nick.</p>
 					<div class="mensaje" id="mensaje" ></div>
 					<table>

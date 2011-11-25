@@ -30,7 +30,7 @@ require_once("inc/Comprobador.inc");
 				<!-- Main start -->
 				<h2><a href="jugando"><strong>Partidos</strong> en juego</a></h2>
 				<div class="content">
-					<img src="images/zakumi.png" class="cpic right" alt="" />
+					<img src="images/floripondio.png" class="cpic right" alt="" />
 					<p><strong>Los partidos</strong> que se muestran a continuaci&oacute;n est&aacute;n en juego, y su resultado puede ser modificado gastando los <strong>minutos esp&iacute;a</strong> seg&uacute;n se explica en las normas.</p>
 					<img style="float:left; margin:20px" src="images/reloj.png" />
 					<p style="margin:50px; font-size:20px">Tienes un total de <strong id="mins"><?= $jugadoractual->getMinutos() ?></strong> minutos disponibles.</p>
@@ -70,7 +70,7 @@ require_once("inc/Comprobador.inc");
 
 				<h2><a href="obtener"><strong>Jornadas</strong> con minutos</a></h2>
 				<div class="content">
-					<img src="images/zakumi.png" class="cpic right" alt="" />
+					<img src="images/floripondio.png" class="cpic right" alt="" />
 					<p><strong>Estas</strong> jornadas son las que permiten ganar minutos esp&iacute;a, tal y como se explica en las reglas. Se debe apostar, antes de empezar la jornada, cuantos goles se van a marcar entre todos los partidos de dicha jornada.</p>
 					<table>
 					<tr>

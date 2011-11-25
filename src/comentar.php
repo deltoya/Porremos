@@ -19,7 +19,7 @@ $jugador = $usuarios->getCurrent();
 				<div class="content">
 
 					<form name="updateuser" action="comenta.php" method="POST">
-					<img src="images/zakumi.png" class="cpic right" alt="" />
+					<img src="images/floripondio.png" class="cpic right" alt="" />
 					<p><strong>Expl&aacute;yate!</strong></p>
 					<div class="mensaje" id="mensaje" ></div>
 					<table>

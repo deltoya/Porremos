@@ -20,7 +20,7 @@ $jugador = $usuarios->getCurrent();
 				<div class="content">
 
 					<form name="adddate" action="adddate.php" method="post">
-					<img src="../images/zakumi.png" class="cpic right" alt="" />
+					<img src="../images/floripondio.png" class="cpic right" alt="" />
 					<p><strong>Alta de</strong> Jornadas. Aqu&iacute; damos de alta las jornadas para adjuntar los minutos a los jugadores seg&uacute;n sus aciertos. Recuerda que s&oacute;lo hay minutos en la fase de grupos, despu&eacute;s no. Adem&aacute;s, los minutos var&iacute;an en funci&oacute;n del n&uacute;mero de partidos de la jornada.</p>
 					<div class="mensaje" id="mensaje" ></div>
 					<table>

@@ -37,7 +37,7 @@ require_once("inc/Comprobador.inc");
 				<div class="content">
 	
 					<form name="actualizaPartidos" action="/apuesta.php" method="POST">
-					<img src="images/zakumi.png" class="cpic right" alt="" />
+					<img src="images/floripondio.png" class="cpic right" alt="" />
 					<p><strong>A continuaci&oacute;n</strong> intentaremos explicar el detalle de como ha obtenido todos sus puntos <?=$jugadorvisitado->getNick() ?>. <?= $mensajes[rand(0,5)] ?> </p>
 					<p>Tambi&eacute;n se incluye una gr&aacute;fica de la evoluci&oacute;n de sus puntos en las distintas jornadas.</p>
 					<table>

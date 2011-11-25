@@ -17,7 +17,7 @@ require_once("../inc/UsuarioDAO.inc");
 				<div class="content">
 	
 					<form name="actualizaPartidos" action="introduceResultados.php" method="POST">
-					<img src="/images/zakumi.png" class="cpic right" alt="" />
+					<img src="/images/floripondio.png" class="cpic right" alt="" />
 					<p><strong>Introduce el</strong> resultado de los partidos que ya se hayan jugado. Recuerda que el resultado que tienes que meter es a <strong>90 minutos</strong>. Si te equivocas, tendr&aacute; que corregirlo F&eacute;lix query en mano, y posiblemente tambi&eacute;n aproveche para meterte un palo por el culo. Amablemente, eso si.</p>
 					<table>
 					<tr>

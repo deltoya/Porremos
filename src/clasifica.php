@@ -16,7 +16,7 @@ include ("header.php")
 				<h2><strong>Clasificaci&oacute;n</strong> por puntos</h2>
 				<div class="content">
 	
-					<img src="images/zakumi.png" class="cpic right" alt="" />
+					<img src="images/floripondio.png" class="cpic right" alt="" />
 					<p><strong>La clasificaci&oacute;n</strong> ordena a todos los participantes seg&uacute;n los aciertos que hayan tenido hasta el momento. Los criterios de puntuaci&oacute;n est&aacute;n disponibles en las <a href="normas.php">normas</a>. La clasificaci&oacute;n no se considerar&aacute; definitiva hasta la finalizaci&oacute;n del mundial. Adem&aacute;s de los aciertos en los partidos, tambi&eacute;n se tienen en cuenta las apuestas adicionales explicadas en las normas.
 					<table>
 					<tr>

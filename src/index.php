@@ -19,7 +19,7 @@ require_once("inc/Comprobador.inc");
 				<div class="content">
 	
 					<form name="actualizaPartidos" action="/apuesta.php" method="POST">
-					<img src="images/zakumi.png" class="cpic right" alt="" />
+					<img src="images/floripondio.png" class="cpic right" alt="" />
 					<p><strong>Los partidos</strong> que se muestran a continuaci&oacute;n son aquellos que todav&iacute;a no se han jugado, aunque ya hayas seleccionado un resultado. Recuerda que debes seleccionarlo antes de las 12 de la noche del d&iacute;a anterior a su celebraci&oacute;n. Apuesta y disfruta :)</p>
 					<table>
 					<tr>

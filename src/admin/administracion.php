@@ -14,7 +14,7 @@ include ("../header.php")
 				<h2><strong>Tareas</strong> de administraci&oacute;n</h2>
 				<div class="content">
 	
-					<img src="/images/zakumi.png" class="cpic right" alt="" />
+					<img src="/images/floripondio.png" class="cpic right" alt="" />
 					<p><strong>Tuyo el</strong> poder y tuya la gloria, administrador. Utiliza el primero con sabidur&iacute;a, y nunca hagas mas trampas de las que sean necesarias para quedarte con toda la pasta, que luego se dan cuenta los primos.</p>
 					<p><ul>
 					<li><a href="altaUsuario.php">Alta de usuarios</a></li>

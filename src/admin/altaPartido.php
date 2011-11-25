@@ -20,7 +20,7 @@ $jugador = $usuarios->getCurrent();
 				<div class="content">
 
 					<form name="addmatch" action="addmatch.php" method="post">
-					<img src="../images/zakumi.png" class="cpic right" alt="" />
+					<img src="../images/floripondio.png" class="cpic right" alt="" />
 					<p><strong>Alta de</strong> Partidos. Aqu&iacute; podr&aacute;s dar de alta los partidos de la fases sucesivas de la eurocopa. Recuerda, si est&aacute;s dando de alta partidos mas all&aacute; de cuartos de final, y te parece ver a Espa&ntilde;a en alg&uacute;n lado, es una ilusi&oacute;n &oacute;ptica.</p>
 					<div class="mensaje" id="mensaje" ></div>
 					<table>

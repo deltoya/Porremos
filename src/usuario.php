@@ -19,7 +19,7 @@ $jugador = $usuarios->getCurrent();
 				<div class="content">
 
 					<form name="updateuser" action="updateuser.php" method="POST">
-					<img src="images/zakumi.png" class="cpic right" alt="" />
+					<img src="images/floripondio.png" class="cpic right" alt="" />
 					<p><strong>Aqu&iacute; puedes</strong> varias caracter&iacute;sticas de tu usuario. Te pedimos que por favor cambies la password si no lo has hecho ya. La password inicial no es mas que eso, inicial. Tambi&eacute;n puedes cambiar el nombre por el que te ver&aacute;n los dem&aacute;s participantes cuando hagas comentarios, y con el que saldr&aacute;s en la clasificaci&oacute;n. Tu identificador de usuario, en contra, es fijo y no puedes cambiarlo</p>
 					<div class="mensaje" id="mensaje" ></div>
 					<table>

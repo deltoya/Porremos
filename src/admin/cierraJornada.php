@@ -22,7 +22,7 @@ require_once("../inc/Comprobador.inc");
 
 				<h2><strong>Jornadas</strong> con minutos</h2>
 				<div class="content">
-					<img src="/images/zakumi.png" class="cpic right" alt="" />
+					<img src="/images/floripondio.png" class="cpic right" alt="" />
 					<p><strong>Aqu&iacute;</strong> se cierran las jornadas para que se sumen los minutos esp&iacute;a a los primos que hayan acertados los goles de la jornada.</p>
 					<table>
 					<tr>
