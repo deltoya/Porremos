@@ -9,7 +9,9 @@ class UsuarioDAO extends DDBB {
   public static $UsuariosPorPagina = 25;
 
   public function getCurrent() {
-    return $this->getById($_SESSION['user_id']);
+    if (isset($_SESSION['user_id'])) 
+        return $this->getById($_SESSION['user_id']);
+    return null;
   }
 
   public function save(Usuario $usuario) {
