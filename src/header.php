@@ -16,7 +16,7 @@ Released   : 20080425
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
-<title>Porra mundial 2010 Matchmind</title>
+<title>Porra Eurocopa 2012 Matchmind</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link rel="stylesheet" type="text/css" href="/css/default.css" />
@@ -29,7 +29,7 @@ Released   : 20080425
 
 <div id="outer">
 	<div id="header">
-		<h1><span>Porra</span><strong>Mundial</strong>2010</h1>
+		<h1><span>Euro</span><strong>Porra</strong>2012</h1>
 		<div id="menu">
 			<ul>
 				<li class="first"><a href="/index.php">resultados</a></li>
