@@ -16,7 +16,7 @@
 	
 					<form name="autenticacion" action="/auth.php" method="POST">
 					<img src="images/floripondio.png" class="cpic right" alt="" />
-					<p><strong>Esta</strong> es una web privada. Por favor, aut&eacute;nticate con la identificaci&oacute;n que se te facilit&oacute; al inscribirte. Si no te has inscrito, habla con Enrique Puig, Alberto Fern&aacute;ndez, F&eacute;lix Velasco o Jorge Vadillo. Si no les conoces, me temo que te has equivocado de sitio.</p>
+					<p><strong>Esta</strong> es una web privada. Por favor, aut&eacute;nticate con la identificaci&oacute;n que se te facilit&oacute; al inscribirte. Si no te has inscrito, habla con Antonio, Alberto, F&eacute;lix o Jorge. Si no les conoces, me temo que te has equivocado de sitio.</p>
 					<p>
 <?
 	if (isset($_SESSION['mensaje'])) {
