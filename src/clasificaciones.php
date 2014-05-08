@@ -4,31 +4,6 @@ require_once("inc/PartidoDAO.inc");
 require_once("inc/UsuarioDAO.inc");
 require_once("inc/Comprobador.inc");
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!--
-
-Design by Free CSS Templates
-http://www.freecsstemplates.org
-Released for free under a Creative Commons Attribution 2.5 License
-
-Name       : Bookish
-Version    : 1.0
-Released   : 20080425
-
--->
-<html>
-<head>
-<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
-<title>Europorra 2008 Matchmind</title>
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<link rel="stylesheet" type="text/css" href="default.css" />
-<script language="javascript">
-</script>
-</head>
-<body>
-
-<div id="outer">
 <? include ("header.php") ?>
 	<div id="inner">
 

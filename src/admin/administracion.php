@@ -18,6 +18,7 @@ include ("../header.php")
 					<p><strong>Tuyo el</strong> poder y tuya la gloria, administrador. Utiliza el primero con sabidur&iacute;a, y nunca hagas mas trampas de las que sean necesarias para quedarte con toda la pasta, que luego se dan cuenta los primos.</p>
 					<p><ul>
 					<li><a href="altaUsuario.php">Alta de usuarios</a></li>
+					<li><a href="resetUsuario.php">Reseteo de password de usuarios</a></li>
 					<li><a href="altaPartido.php">Alta de partidos</a></li>
 					<li><a href="meteResultados.php">Resultado de partidos</a></li>
 					<li><a href="altaJornada.php">Alta de jornadas</a></li>

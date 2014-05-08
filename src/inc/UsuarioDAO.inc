@@ -36,14 +36,14 @@ class UsuarioDAO extends DDBB {
          'nick' => $usuario->getNick(),
          'referrer' => $_SESSION['user_id'],
          'email' => $usuario->getEmail(),
-         'minutos' => 20,
+         'minutos' => 10,
        ));
-    mail( "fvelasco@matchmind.es", "Email Subject", "Vamos que nos vamos", "From: fvelasco@matchmind.es" );
+    //mail( "fvelasco@matchmind.es", "Email Subject", "Vamos que nos vamos", "From: fvelasco@matchmind.es" );
   }
 
   public function getApuesta($id, $partidoid) {
     $retorno = new Apuesta();
-    $sql = $this->dbh->prepare("SELECT goleslocal,golesvisitante FROM apuestas where id_jugador = :idjugador and id_partido = :idpartido");
+    $sql = $this->dbh->prepare("SELECT goleslocal,golesvisitante,id_jugador, id_partido FROM apuestas where id_jugador = :idjugador and id_partido = :idpartido");
     $sql->execute(array(
          'idjugador' => $id,
          'idpartido' => $partidoid
@@ -246,7 +246,7 @@ class UsuarioDAO extends DDBB {
     return false;
   }
 
-  private function getByName($username) {
+  public function getByName($username) {
     $retorno = new Usuario();
     $sql = $this->dbh->prepare("SELECT * FROM jugadores WHERE nombre = ?");
     $sql->execute(array($username));
@@ -338,9 +338,9 @@ union
 union
 
  select sum(p.puntos) as puntos, j.nombre, j.nick, j.password, j.admin, j.id, j.minutos, 4
- from preguntas p, jugadores j, soluciones s
- where s.id_jugador = j.id and s.id_pregunta = p.id and p.respuesta is not NULL and
-   s.respuesta = p.respuesta and p.tipo=1
+ from preguntas p, jugadores j, soluciones s, preguntas_solucionadas ps
+ where s.id_jugador = j.id and s.id_pregunta = p.id and 
+   s.respuesta = ps.respuesta and p.tipo=1 and p.id = ps.id_pregunta 
  group by j.nombre
 
 union
@@ -399,16 +399,16 @@ union
 union
 
  select sum(p.puntos) as puntos, j.nombre, j.nick, j.password, j.admin, j.id, j.minutos, 4
- from preguntas p, jugadores j, soluciones s
- where s.id_jugador = j.id and s.id_pregunta = p.id and p.respuesta is not NULL and
-   s.respuesta = p.respuesta and p.tipo=1
+ from preguntas p, jugadores j, soluciones s, preguntas_solucionadas ps
+ where s.id_jugador = j.id and s.id_pregunta = p.id and 
+   s.respuesta = ps.respuesta and p.tipo=1 and p.id = ps.id_pregunta 
  group by j.nombre
 
 union
 
  select 0 as puntos, j.nombre, j.nick, j.password, j.admin, j.id, j.minutos, 5
  from jugadores j
-) as datos group by id order by puntos desc limit ".$base."," . self::$UsuariosPorPagina. "
+) as datos group by id order by puntos desc, id limit ".$base."," . self::$UsuariosPorPagina. "
   ");
     $sql->execute();
     foreach ($sql->fetchAll() as $row) {
@@ -429,7 +429,7 @@ union
   }
 
   public function getPuntosenFecha($id, DateTime $fecha) {
-    $ffecha = $fecha->format("Y-m-d");
+    $ffecha = $fecha->format("Y-m-d") . " 23:59:59";
     $sql = $this->dbh->prepare("select sum(puntos) puntos from
 (select sum(p.puntos) as puntos, 1
  from apuestas ap, jugadores j, partidos p
@@ -466,11 +466,10 @@ union
 union
 
  select sum(p.puntos) as puntos, 4
- from preguntas p, jugadores j, soluciones s
- where s.id_jugador = j.id and s.id_pregunta = p.id and p.respuesta is not NULL and
-   p.fecha <= :fecha4 and j.id = :id4 and
-   s.respuesta = p.respuesta and p.tipo=1
- group by j.nombre
+ from preguntas p, jugadores j, soluciones s, preguntas_solucionadas ps
+ where s.id_jugador = j.id and s.id_pregunta = p.id and p.id = ps.id_pregunta and
+   ps.fecha <= :fecha4 and j.id = :id4 and
+   s.respuesta = ps.respuesta and p.tipo=1
 
 union
 

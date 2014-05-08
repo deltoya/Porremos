@@ -9,8 +9,10 @@ $jugadoractual = $usuarios->getCurrent();
 $partidospendientes = $partidos->getPendientes();
 
 foreach($partidospendientes as $partido) {
-    if ($_REQUEST['ap_' . $partido->getId() . '_L'] != '' && $_REQUEST['ap_' . $partido->getId() . '_V'] != '') {
-      $jugadoractual->setApuesta($partido->getId(), $_REQUEST['ap_' . $partido->getId() . '_L'], $_REQUEST['ap_' . $partido->getId() . '_V']);
+    if (!$partido->esCerrado()) {
+      if ($_REQUEST['ap_' . $partido->getId() . '_L'] != '' && $_REQUEST['ap_' . $partido->getId() . '_V'] != '') {
+        $jugadoractual->setApuesta($partido->getId(), $_REQUEST['ap_' . $partido->getId() . '_L'], $_REQUEST['ap_' . $partido->getId() . '_V']);
+      }
     }
 }
 

@@ -96,7 +96,7 @@ include ("../header.php")
       informa("Por favor, introduce una password mas larga");
       marca(document.getElementById('pwd'));
       marca(document.getElementById('pwd2'));
-    } else if (pwd.length > 12) {
+    } else if (pwd.length > 25) {
       informa("Por favor, introduce una password mas corta");
       marca(document.getElementById('pwd'));
       marca(document.getElementById('pwd2'));

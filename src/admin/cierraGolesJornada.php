@@ -1,5 +1,6 @@
 <?
 require_once("../inc/Admin.inc");
+require_once("../inc/Security.inc");
 require_once("../inc/PartidoDAO.inc");
 require_once("../inc/UsuarioDAO.inc");
 

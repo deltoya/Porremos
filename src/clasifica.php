@@ -44,7 +44,7 @@ include ("header.php")
   $jugadores = $usuarios->getClasificacion($pagina);
   $class = "rowB";
   $base = 1 + $pagina * UsuarioDAO::$UsuariosPorPagina;
-  $puntosanterior = 0;
+  $puntosanterior = -1;
   foreach($jugadores as $i => $jugador) {
     $class = ($class=='rowB') ? 'rowA' : 'rowB';
     $pre = ''; $post = '';

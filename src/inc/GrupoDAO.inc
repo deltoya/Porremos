@@ -19,7 +19,7 @@ class GrupoDAO extends DDBB {
        ));
   }
 
-  public function create(Grupo $grupo) {
+  public function create(Grupo $grupo, $id) {
     $sql = $this->dbh->prepare("INSERT INTO grupos (nombre, descripcion) " .
                                "VALUES ( :nombre, :descripcion )");
 
@@ -27,6 +27,10 @@ class GrupoDAO extends DDBB {
          'nombre' => $grupo->getNombre(),
          'descripcion' => $grupo->getDescripcion(),
        ));
+
+     $sql = $this->dbh->prepare("INSERT INTO grupo_jugador " .
+                               "VALUES ( LAST_INSERT_ID(), ? )");
+     $sql->execute(array($id));
   }
 
   public function getById($id) {
@@ -58,6 +62,26 @@ class GrupoDAO extends DDBB {
 
     return $retorno;
     
+  }
+
+  public function removeUser($groupId, $userId) {
+    $sql = $this->dbh->prepare("delete from grupo_jugador where id_grupo = ? and id_jugador = ? ");
+    $sql->execute(array($groupId, $userId));
+  }
+
+  public function addUser($groupId, $email) {
+    $sql = $this->dbh->prepare("SELECT id from jugadores where email=?");
+    $sql->execute(array($email));
+
+    if ($row = $sql->fetch())
+    {
+      $sql = $this->dbh->prepare("INSERT INTO grupo_jugador values ( ?,?)");
+      $sql->execute(array($groupId, $row['id']));
+
+      return true;
+    }
+
+    return false;
   }
 
   public function getClasificacion($groupId) {
@@ -97,9 +121,9 @@ union
 union
 
  select sum(p.puntos) as puntos, j.nombre, j.nick, j.password, j.admin, j.id, j.minutos, 4
- from preguntas p, jugadores j, soluciones s
- where s.id_jugador = j.id and s.id_pregunta = p.id and p.respuesta is not NULL and
-   s.respuesta = p.respuesta and p.tipo=1
+ from preguntas p, jugadores j, soluciones s, preguntas_solucionadas ps
+ where s.id_jugador = j.id and s.id_pregunta = p.id and 
+   s.respuesta = ps.respuesta and p.tipo=1 and p.id = ps.id_pregunta 
  group by j.nombre
 
 union

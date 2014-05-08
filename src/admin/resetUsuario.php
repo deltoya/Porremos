@@ -1,11 +1,11 @@
 <?
-require_once("inc/Security.inc");
-require_once("inc/UsuarioDAO.inc");
+require_once("../inc/Admin.inc");
+require_once("../inc/UsuarioDAO.inc");
 $usuarios = new UsuarioDAO(); 
 $jugador = $usuarios->getCurrent();
 
 ?>
-<? include ("header.php") ?>
+<? include ("../header.php") ?>
 	<div id="inner">
 
 		<div id="main">
@@ -15,21 +15,17 @@ $jugador = $usuarios->getCurrent();
 
 				<!-- Main start -->
 	
-				<h2><strong>Configuraci&oacute;n</strong> de usuario</h2>
+				<h2><strong>Reseteo</strong> de contrase&ntilde;a</h2>
 				<div class="content">
 
-					<form name="updateuser" action="updateuser.php" method="POST">
-					<img src="images/floripondio.png" class="cpic right" alt="" />
-					<p><strong>Aqu&iacute; puedes</strong> varias caracter&iacute;sticas de tu usuario. Te pedimos que por favor cambies la password si no lo has hecho ya. La password inicial no es mas que eso, inicial. Tambi&eacute;n puedes cambiar el nombre por el que te ver&aacute;n los dem&aacute;s participantes cuando hagas comentarios, y con el que saldr&aacute;s en la clasificaci&oacute;n. Tu identificador de usuario, en contra, es fijo y no puedes cambiarlo</p>
+					<form name="updateuser" action="resetPassword.php" method="POST">
+					<img src="/images/floripondio.png" class="cpic right" alt="" />
+					<p><strong>Ahora vamos</strong> a resetear la password de ese primo que se ha olvidado de ella. Manda narices, verg&uuml;enza. Si total, no va a ser capaz de acertar ni un s&oacute;lo resultado, que mas le da no poder entrar...
 					<div class="mensaje" id="mensaje" ></div>
 					<table>
 					<tr>
 						<td class="second"><label for="nombre">Nombre:</label></td>
-						<td class="second"><input type="text" id='nombre' name="nombre" disabled value="<?=$jugador->getNombre()?>"/></td>
-					</tr>
-					<tr>
-						<td class="second"><label for="nick">Alias:</label></td>
-						<td class="second"><input type="text" id='nick' name="nick" value="<?=$jugador->getNick()?>"/></td>
+						<td class="second"><input type="text" id='nombre' name="nombre" /></td>
 					</tr>
 					<tr>
 						<td class="second"><label for="password">Password:</label></td>
@@ -51,7 +47,7 @@ $jugador = $usuarios->getCurrent();
 	
 		</div>
 	
-<? include("side.php") ?>
+<? include("../side.php") ?>
 	</div>
 
 </div>
@@ -63,16 +59,9 @@ $jugador = $usuarios->getCurrent();
 </body>
 <script language="javascript" defer >
   function guarda() {
-    var alias = document.getElementById('nick').value;
     var pwd = document.getElementById('password').value;
     var pwd2 = document.getElementById('password2').value;
-    if (alias.length < 4) {
-      marca(document.getElementById('nick'));
-      informa("El alias es demasiado corto");
-    } else if (alias.length > 15) {
-      informa("El alias es demasiado largo");
-      marca(document.getElementById('nick'));
-    } else if (pwd != pwd2) {
+    if (pwd != pwd2) {
       informa("Las passwords no coinciden");
       marca(document.getElementById('pwd'));
       marca(document.getElementById('pwd2'));

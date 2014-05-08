@@ -16,7 +16,7 @@ Released   : 20080425
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
-<title>Porra Eurocopa 2012 Matchmind</title>
+<title>Porremos 2012</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link rel="stylesheet" type="text/css" href="/css/default.css" />
@@ -36,6 +36,7 @@ Released   : 20080425
 				<li><a href="/preguntas.php">preguntas</a></li>
 				<li><a href="/espia.php">min. esp&iacute;a</a></li>
 				<li><a href="/clasifica.php">clasificaci&oacute;n</a></li>
+				<li><a href="/grupos.php">amigos</a></li>
 				<li><a href="/normas.php">normas</a></li>
 				<li><a href="/usuario.php">usuario</a></li>
 <? 

@@ -50,7 +50,7 @@ require_once("inc/Comprobador.inc");
 				</div>
 	
 				<!-- Main End -->
-				<div class="foot"></div>				
+				<div class="foot"></div>
 			</div>
 	
 		</div>

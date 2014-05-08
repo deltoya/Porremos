@@ -7,10 +7,13 @@ $comentarios = new ComentarioDAO();
 $usuarios = new UsuarioDAO();
 $usuario = $usuarios->getCurrent();
 
-$texto = $_POST['texto'];
+if ($usuario->getId()!= 265) {
 
-if ($texto)
-  $comentarios->anyade($usuario->getId(), stripslashes($texto));
+  $texto = $_POST['texto'];
+
+  if ($texto)
+    $comentarios->anyade($usuario->getId(), stripslashes($texto));
+}
 
 header('Location:/comentarios.php');
 

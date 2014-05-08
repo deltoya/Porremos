@@ -2,13 +2,14 @@
 class Pregunta {
   private $id;
   private $texto;
-  private $respuesta;
+  private $respuestas;
   private $valor;
   private $fecha;
   private $posibles;
 
   public function __construct() {
     $this->posibles=array();
+    $this->respuestas=array();
   }
 
   public function getId() {
@@ -20,7 +21,7 @@ class Pregunta {
   }
 
   public function getRespuesta() {
-    return $this->respuesta;
+    return $this->respuestas;
   }
 
   public function getValor() {
@@ -43,8 +44,8 @@ class Pregunta {
     $this->texto = $texto;
   }
 
-  public function setRespuesta($respuesta) {
-    $this->respuesta = $respuesta;
+  public function addRespuesta($respuesta) {
+    $this->respuestas[] = $respuesta;
   }
 
   public function setValor($valor) {

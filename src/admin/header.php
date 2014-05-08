@@ -37,6 +37,7 @@ Released   : 20080425
 				<li><a href="/preguntas.php">preguntas</a></li>
 				<li><a href="/espia.php">min. esp&iacute;a</a></li>
 				<li><a href="/clasifica.php">clasificaci&oacute;n</a></li>
+				<li><a href="/grupos.php">grupos</a></li>
 				<li><a href="/normas.php">normas</a></li>
 				<li><a href="/usuario.php">usuario</a></li>
 <? 

@@ -21,11 +21,11 @@ class Grupo {
   }
 
   public function getNombre() {
-    return $this->nombre;
+    return htmlspecialchars($this->nombre);
   }
 
   public function getDescripcion() {
-    return $this->descripcion;
+    return htmlspecialchars($this->descripcion);
   }
 
   public function setId($id) {
@@ -52,6 +52,13 @@ class Grupo {
      return $this->gdao->getClasificacion($this->getId());
   }
 
+  public function addUser($email) {
+     return $this->gdao->addUser($this->getId(), $email);
+  }
+
+  public function removeUser($userid) {
+     return $this->gdao->removeUser($this->getId(), $userid);
+  }
 }
 
 ?>

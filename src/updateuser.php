@@ -10,7 +10,7 @@ $newpwd2 = $_REQUEST['password2'];
 $newnick = $_REQUEST['nick'];
 $cambio = false;
 
-if(($newpwd == $newpwd2) && (strlen($newpwd) > 6) && (strlen($newpwd)<13)) {
+if(($newpwd == $newpwd2) && (strlen($newpwd) > 6) && (strlen($newpwd)<26) && ($usuario->getId()!= 265)){
   $cambio = true;
   $usuario->setPassword(crypt($newpwd));
 }
@@ -23,6 +23,6 @@ if((strlen($newnick) >= 4) && (strlen($newnick) <= 15)) {
 if ($cambio)
   $usuario->save();
 
-header('Location:/usuario.php');
+header('Location:/logout.php');
 
 ?>

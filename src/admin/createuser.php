@@ -14,10 +14,10 @@ $usuario->setPassword(crypt($newpwd));
 $usuario->setNick($newnick);
 $usuario->setNombre($newname);
 $usuario->setEmail($newemail);
-$usuario->setMinutos(20);
+$usuario->setMinutos(10);
 
 $usuarios->create($usuario);
 
-header('Location:../clasifica.php');
+header('Location:administracion.php');
 
 ?>

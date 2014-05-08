@@ -12,7 +12,7 @@ $puntos = $_REQUEST['puntos'];
 
 $partido->setLocal($local);
 $partido->setVisitante($visitante);
-$partido->setFecha($fecha);
+$partido->setFecha($fecha . ' 20:45:00');
 $partido->setPuntos($puntos);
 $partido->setJugado(0);
 $partido->setGolesLocal(0);
